@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css" />
+
+    <title>Random Text Generator</title>
+  </head>
+  <body>
+    <h1>Random Text Generator</h1>
+    <form action="/show" method="POST">
+      <input
+        type="text"
+        name="inputext"
+        placeholder="Enter your name"
+        value="<%= temp1 %>"
+        required
+      />
+      <br /><br />
+      <button>Submit</button>
+    </form>
+    <p><%=temp3 %></p>
+  </body>
+  <script src="myscript.js"></script>
+</html>
