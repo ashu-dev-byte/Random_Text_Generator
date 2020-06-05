@@ -4,22 +4,22 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 let temp = [
-  " is a good boy.",
-  " is a bad boy.",
-  " is rich.",
-  " is nerdy.",
-  " is cautious.",
-  " is an asshole.",
-  " is handsome.",
-  " is arrogant.",
-  " is fat.",
-  " is bald.",
-  " is reliable.",
-  " is tall.",
+  " is a good",
+  " is a bad",
+  " is rich",
+  " is nerdy",
+  " is cautious",
+  " is an asshole",
+  " is handsome",
+  " is arrogant",
+  " is fat",
+  " is bald",
+  " is reliable",
+  " is tall",
   " is charming",
-  " is aggressive.",
-  " is of helpful nature.",
-  " is athletic.",
+  " is aggressive",
+  " is helpful",
+  " is athletic",
 ];
 let prev1 = -1;
 let prev2 = -2;
@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
 app.post("/show", (req, res) => {
   temp1 = req.body.inputext;
   temp2 = Math.floor(Math.random() * 5.9);
-  console.log(temp);
+  console.log(temp1);
 
   while (prev1 == temp2 || prev2 == temp2 || prev3 == temp2 || prev4 == temp2) {
     temp2 = Math.floor(Math.random() * 15.95);
@@ -48,10 +48,15 @@ app.post("/show", (req, res) => {
   prev3 = prev2;
   prev2 = prev1;
   prev1 = temp2;
-  temp3 = temp1 + temp[temp2];
+  temp3 = temp1 + temp[temp2] + ".";
   console.log(temp3);
 
-  res.render("home.ejs", { temp1: temp1, temp3: temp3 });
+  let n = temp3.split(" ");
+  let m = n[n.length - 1];
+  console.log(m);
+  console.log("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+
+  res.render("home.ejs", { temp1: temp1, temp3: temp3, m: m });
 });
 
 app.get("*", (req, res) => {
