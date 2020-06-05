@@ -27,11 +27,17 @@ button {
   width: 185px;
   height: 54px;
   border: 4px solid black;
+  margin-right: 15px;
 }
 
 p {
   font-size: 44px;
   font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
 }
 
 img {

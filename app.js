@@ -10,8 +10,21 @@ let temp = [
   " is nerdy.",
   " is cautious.",
   " is an asshole.",
+  " is handsome.",
+  " is arrogant.",
+  " is fat.",
+  " is bald.",
+  " is reliable.",
+  " is tall.",
+  " is charming",
+  " is aggressive.",
+  " is of helpful nature.",
+  " is athletic.",
 ];
-let prev = -1;
+let prev1 = -1;
+let prev2 = -2;
+let prev3 = -3;
+let prev4 = -4;
 let temp1 = "";
 let temp2 = "";
 let temp3 = "";
@@ -27,10 +40,14 @@ app.post("/show", (req, res) => {
   temp2 = Math.floor(Math.random() * 5.9);
   console.log(temp);
 
-  while (prev == temp2) {
-    temp2 = Math.floor(Math.random() * 5.9);
+  while (prev1 == temp2 || prev2 == temp2 || prev3 == temp2 || prev4 == temp2) {
+    temp2 = Math.floor(Math.random() * 15.95);
   }
-  prev = temp2;
+
+  prev4 = prev3;
+  prev3 = prev2;
+  prev2 = prev1;
+  prev1 = temp2;
   temp3 = temp1 + temp[temp2];
   console.log(temp3);
 
