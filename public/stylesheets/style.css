@@ -33,3 +33,10 @@ p {
   font-size: 44px;
   font-weight: bold;
 }
+
+img {
+  width: 350;
+  height: 350;
+  border: 7px solid black;
+  object-fit: cover;
+}

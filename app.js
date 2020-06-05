@@ -18,14 +18,8 @@ let temp3 = "";
 
 app.use(express.static(__dirname + "/public"));
 
-app.get("/reload", (req, res) => {
-  temp1 = "";
-  temp3 = "";
-  res.render("home.ejs", { temp1: temp1, temp3: temp3 });
-});
-
 app.get("/", (req, res) => {
-  res.render("home.ejs", { temp1: temp1, temp3: temp3 });
+  res.render("index.ejs");
 });
 
 app.post("/show", (req, res) => {
