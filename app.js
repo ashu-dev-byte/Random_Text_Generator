@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
 
 app.post("/show", (req, res) => {
   temp1 = req.body.inputext;
-  temp2 = Math.floor(Math.random() * 5.9);
+  temp2 = Math.floor(Math.random() * 15.95);
   console.log(temp1);
 
   while (prev1 == temp2 || prev2 == temp2 || prev3 == temp2 || prev4 == temp2) {
